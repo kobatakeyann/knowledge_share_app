@@ -1,27 +1,41 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AppProvider } from "./contexts/AppContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import HomePage from "./pages/HomePage";
+import { AppProvider } from "./contexts/AppContext";
 import FeedPage from "./pages/FeedPage";
-import UsersPage from "./pages/UsersPage";
+import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
+import UsersPage from "./pages/UsersPage";
 
 function App() {
-  return (
-    <AppProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="feed" element={<FeedPage />} />
-            <Route path="users" element={<UsersPage />} />
-            <Route path="profile/:userId" element={<ProfilePage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </AppProvider>
-  );
+	return (
+		<AppProvider>
+			<BrowserRouter>
+				<Routes>
+					<Route
+						path="/knowledge_share_app"
+						element={<Layout />}
+					>
+						<Route
+							index
+							element={<HomePage />}
+						/>
+						<Route
+							path="feed"
+							element={<FeedPage />}
+						/>
+						<Route
+							path="users"
+							element={<UsersPage />}
+						/>
+						<Route
+							path="profile/:userId"
+							element={<ProfilePage />}
+						/>
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</AppProvider>
+	);
 }
 
 export default App;
