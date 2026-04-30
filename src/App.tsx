@@ -20,15 +20,15 @@ function App() {
 							element={<HomePage />}
 						/>
 						<Route
-							path="feed"
+							path="/knowledge_share_app/feed"
 							element={<FeedPage />}
 						/>
 						<Route
-							path="users"
+							path="/knowledge_share_app/users"
 							element={<UsersPage />}
 						/>
 						<Route
-							path="profile/:userId"
+							path="/knowledge_share_app/profile/:userId"
 							element={<ProfilePage />}
 						/>
 					</Route>

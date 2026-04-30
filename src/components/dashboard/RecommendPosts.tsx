@@ -44,7 +44,7 @@ export default function RecommendPosts() {
 				return (
 					<Link
 						key={post.id}
-						to="/feed"
+						to="/knowledge_share_app/feed"
 						className="block glass rounded-xl p-3 border border-white/5 hover:bg-white/5 transition-all"
 					>
 						<div className="flex items-start gap-2">

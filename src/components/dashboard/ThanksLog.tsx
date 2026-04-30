@@ -56,14 +56,14 @@ export default function ThanksLog() {
 						>
 							<div className="flex items-center gap-1.5 text-xs">
 								<Link
-									to={`/profile/${t.fromUserId}`}
+									to={`/knowledge_share_app/profile/${t.fromUserId}`}
 									className="font-medium text-gray-300 hover:text-white"
 								>
 									{getUserName(t.fromUserId)}
 								</Link>
 								<span className="text-gray-600">→</span>
 								<Link
-									to={`/profile/${t.toUserId}`}
+									to={`/knowledge_share_app/profile/${t.toUserId}`}
 									className="font-medium text-primary-400 hover:text-primary-300"
 								>
 									{getUserName(t.toUserId)}
